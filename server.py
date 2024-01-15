@@ -9,7 +9,7 @@ app = FastAPI()
 # Enable CORS (Cross-Origin Resource Sharing)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Allow all origins (adjust as needed)
+    allow_origins=["http://localhost:3000",""],  # Allow all origins (adjust as needed)
     allow_credentials=True,
     allow_methods=["*"],  # Allow all methods (adjust as needed)
     allow_headers=["*"],  # Allow all headers (adjust as needed)
@@ -40,4 +40,4 @@ def predict(data: dict):
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run(app, port=4500)
+    uvicorn.run(app,host='0.0.0.0' ,port=4500)
