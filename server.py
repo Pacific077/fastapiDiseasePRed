@@ -9,7 +9,7 @@ app = FastAPI()
 # Enable CORS (Cross-Origin Resource Sharing)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5000",""],  # Allow all origins (adjust as needed)
+    allow_origins=["http://localhost:5000","https://we-care-urb2.onrender.com"],  # Allow all origins (adjust as needed)
     allow_credentials=True,
     allow_methods=["*"],  # Allow all methods (adjust as needed)
     allow_headers=["*"],  # Allow all headers (adjust as needed)
